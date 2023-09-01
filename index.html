@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Student's Attendance</title>
+
+	<style type="text/css">
+
+		@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap');
+
+       * {
+       	font-family: 'Poppins', sans-serif;
+       }
+		
+     header {
+			display: flex;
+			background-color: #ffff;
+			justify-content: space-between;
+			padding-left: 20px;
+			padding-right: 120px;
+			flex-wrap: wrap;
+			height: 100px;
+			align-items: center;
+		}
+
+		header > img {
+			margin-top: 10px;
+		}
+
+		nav > a {
+			padding: 20px;
+			list-style: none;
+			justify-content: space-between;
+			padding-top: 20px;
+			text-decoration: none;
+			color:  #315e7d;
+			font-size: 23px;
+
+		}
+        nav > a:hover{
+        	color: #ed652b;
+        }
+		.head-div {
+		  	display: flex;
+		  	justify-content: space-between;
+		  	color:  #315e7d;
+		  	width: 1000px;
+		  	border-radius: 10px;
+		  	gap: 15px;
+		  	margin: 0 auto;
+		  	margin-top: 60px;
+		  }
+
+		  .div {
+		  	flex: 1;
+		  	text-align: center;
+		  	padding: 20px;
+		  	border: 1px solid;
+		  	border-radius: 15px;
+		  	margin-top: -150px;
+		  	background-color: #ed652b;
+		  }
+
+		  h2 {
+		  	color: #315e7d;
+		  }
+
+
+
+		 table {
+		 	margin: 0 auto;
+		 	width: 80%;
+		 	background-color: #315e7d;
+		 	color: white;
+		 	border-collapse: collapse;
+		 }
+
+		 .table {
+		 	margin-top: 100px;
+		 	text-align: center;
+		 }
+
+		  tr {
+		  	width: 200px;
+		  	height: 50px;
+		  	padding: 10px;		 	
+		  }
+
+
+		  footer {
+		  	display: flex;
+			background-color: #ffff;
+			justify-content: space-between;
+			padding-left: 20px;
+			padding-right: 20px;
+			flex-wrap: wrap;
+			height: 100px;
+			align-items: center;
+		  }
+
+/*		  Form CSS*/
+
+#form_div {
+	display: none;
+}
+ .form-input-div {
+
+		  	height: 75px;
+		  }
+
+		  .input {
+		  	width: 300px;
+		  	height: 40px;
+		  	color: #315e7d;
+		  	padding-right: 10px;
+		  	padding-left: 10px;
+		  	border: none;
+		  }
+
+
+		  form {
+
+		  	width: 400px;
+		  	height: 500px;
+		  	background-color: #ed652b;
+		  	margin-right: auto;
+		  	margin-left: auto;
+		  	display: flex;
+		  	flex-direction: column;
+		  	justify-content: center;
+		  	align-items: center;
+		  	padding: 15px;
+		  	color: #315e7d;
+		  	border-radius: 10px;
+		  	padding-bottom: 30px;
+		  }
+
+		  .button {
+		  	width: 200px;
+		  	border-radius: 20px;
+		  	padding: 10px;
+		  	border: none;
+		  }
+
+		  .date-time input {
+		  	width: 50%;
+		  }
+
+		  .date-time {
+		  	display: flex;
+		  	height: 75px;
+		  	width: 80%;
+		  	gap: 5px;
+		  }
+
+		  select {
+		  	width: 80%;
+		  	height: 45px;
+		  	margin-bottom: 30px;
+		  	border: none;
+		  	background-color: white;
+		  }
+
+		  .sign_in {
+		  	border: none;
+		  	background-color: white;
+		  	font-size: 23px;
+		  	color:  #315e7d;
+		  }
+
+		  .sign_in:hover{
+        	color:  #ed652b;
+        } 
+
+		
+
+	</style>
+</head>
+<body>
+<header>
+		
+<a href="index.html"><img width="60" src="school.jpeg"></a>
+
+		<nav>
+			<button class="sign_in" onclick="DisplayForm ()">Sign In</button>
+			<a href="https://www.kwagei.com/">K.I.T</a>
+		</nav>
+	</header>
+    <div id="home_div">
+	<img width="1265" src="home.jpeg">
+
+
+	<div class="head-div">
+		
+
+		<div class="div">
+			<h1>5</h1>
+			<h3>Cohort 2</h3>
+		</div>
+
+		<div class="div">
+			<h1>8</h1>
+			<h3>Cohort 3</h3>
+		</div>
+
+		<div class="div">
+			<h1>10</h1>
+			<h3>Cohort 4</h3>
+		</div>
+	</div>
+
+
+    <div class="table">
+		<h2>Today's Students Attendance</h2>
+
+		<table id="table" border="1">
+			<tr>
+				<td>Name</td>
+				<td>Cohort</td>
+				<td>Date</td>
+				<td>Time</td>
+				<td>Last Class Experience</td>
+				<td>Today's class plan</td>
+			</tr>
+
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+	</div>
+</div>
+	<div id="form_div">
+		 <form>
+		 
+			 <div class="baby-div">
+			 <h3>Attendance</h3>
+			</div>
+		    
+		    <div  class="form-input-div">
+		    	<input id="name" class="input" placeholder="Name">
+		    </div>
+
+		    <div  class="date-time">
+		    	<input id="date" class="input" placeholder="Date">
+		    	<input id="time" class="input" placeholder="Time">
+		    	
+		    </div>
+
+		    	<select>
+		    		<option>Cohort 2</option>
+		    		<option>Cohort 3</option>
+		    		<option>Cohort 4</option>
+		    	</select>
+		    
+
+		    <div  class= "form-input-div">
+		    	<input id="past_experience" class="input" placeholder="Past Class Update"> 
+		    </div>
+
+		    <div  class="form-input-div">
+		    	<input id="current_plan" class="input" placeholder="Current Class Plan">
+		    </div>
+
+		    <div>
+		    	<button onclick="SubmitForm()" class="button">Submit</button>
+		    </div>
+	    </form>
+	</div>
+
+	<footer>
+		<a href="https://www.kwagei.com/"><img width="60" src="school.jpeg"></a>
+
+		<nav>
+			<p>Developed by <strong>Group A</strong>, Seydenu Sam Seneh</p>
+		</nav>
+
+	</footer>
+
+	<script type="text/javascript">
+	
+	let home_div = document.getElementById('home_div') 
+	// console.log(home_div);
+
+	let form_div = document.getElementById('form_div') 
+
+	function DisplayForm () {
+		document.getElementById('home_div').style.display = 'none';
+
+		document.getElementById('form_div').style.display = 'block';
+		console.log(document.getElementById('form_div'));
+	}
+
+	function SubmitForm () {
+		
+
+		let name = document.getElementById('name').value;
+		let date = document.getElementById('date').value;
+		let time = document.getElementById('time').value;
+		let experience = document.getElementById('past_experience').value;
+		let plan = document.getElementById('current_plan').value;
+
+		// let display_name = document.getElementById('name').innerHTML = name;
+		// let display_date_time = document.getElementById('date_time').innerHTML = date_time;
+		// let display_experience = document.getElementById('past_experience').innerHTML = experience;
+		// let display_plan = document.getElementById('current_plan').innerHTML = plan;
+
+		console.log("Why");
+
+		console.log(name);
+		console.log(date);
+		console.log(time);
+		console.log(experience);
+		console.log(plan);
+		event.preventDefault();
+	}
+
+	</script>
+</body>
+</html>
